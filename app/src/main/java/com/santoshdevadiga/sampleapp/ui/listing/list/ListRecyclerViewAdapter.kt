@@ -1,11 +1,11 @@
-package com.santoshdevadiga.sampleapp.ui.listing
+package com.santoshdevadiga.sampleapp.ui.listing.list
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 
-import com.santoshdevadiga.sampleapp.ui.listing.placeholder.PlaceholderContent.PlaceholderItem
+import com.santoshdevadiga.sampleapp.ui.listing.list.placeholder.PlaceholderContent.PlaceholderItem
 import com.santoshdevadiga.sampleapp.databinding.FragmentListItemBinding
 
 /**

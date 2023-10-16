@@ -1,4 +1,4 @@
-package com.santoshdevadiga.sampleapp.ui.listingmail
+package com.santoshdevadiga.sampleapp.ui.listing.main
 
 import androidx.lifecycle.ViewModel
 

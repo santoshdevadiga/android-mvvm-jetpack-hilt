@@ -17,24 +17,23 @@ import com.santoshdevadiga.sampleapp.R
 import com.santoshdevadiga.sampleapp.databinding.FragmentSlideshowBinding
 import com.santoshdevadiga.sampleapp.databinding.FragmentSplashBinding
 import com.santoshdevadiga.sampleapp.ui.slideshow.SlideshowViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SplashFragment : Fragment() {
 
-    private var _binding: FragmentSplashBinding? = null
+    private lateinit var binding: FragmentSplashBinding
+    private lateinit var splashViewModel: SplashViewModel
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val splashViewModel =
-            ViewModelProvider(this).get(SplashViewModel::class.java)
+    ): View {
+         splashViewModel =
+             ViewModelProvider(this)[SplashViewModel::class.java]
 
-        _binding = FragmentSplashBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        binding = FragmentSplashBinding.inflate(inflater, container, false)
 
         Handler().postDelayed(Runnable {
             Log.i("TAG","Timer Off ||")
@@ -42,7 +41,7 @@ class SplashFragment : Fragment() {
 
         },3000)
 
-        return root
+        return binding.root
     }
 
     fun redirect(){
@@ -53,10 +52,5 @@ class SplashFragment : Fragment() {
         findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
 
        // findNavController().navigate(R.id.action_splashFragment_to_registrationFragment)
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

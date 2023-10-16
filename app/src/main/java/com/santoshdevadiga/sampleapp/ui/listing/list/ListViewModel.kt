@@ -1,4 +1,4 @@
-package com.santoshdevadiga.sampleapp.ui.splash
+package com.santoshdevadiga.sampleapp.ui.listing.list
 
 import androidx.lifecycle.ViewModel
 import com.santoshdevadiga.sampleapp.repository.AppRepository
@@ -6,6 +6,6 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class SplashViewModel @Inject constructor(appRepository: AppRepository) : ViewModel() {
+class ListViewModel @Inject constructor(private val appRepository: AppRepository): ViewModel() {
 
 }

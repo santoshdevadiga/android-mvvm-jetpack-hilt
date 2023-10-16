@@ -17,7 +17,9 @@ import com.santoshdevadiga.sampleapp.R
 import com.santoshdevadiga.sampleapp.databinding.FragmentLoginBinding
 import com.santoshdevadiga.sampleapp.databinding.FragmentSlideshowBinding
 import com.santoshdevadiga.sampleapp.ui.slideshow.SlideshowViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LoginFragment : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null

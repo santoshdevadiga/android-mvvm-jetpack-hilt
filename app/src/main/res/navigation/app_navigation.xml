@@ -80,7 +80,7 @@
         tools:layout="@layout/fragment_bottom_sheet_dialog_list_dialog" />
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.santoshdevadiga.sampleapp.ui.listing.ListFragment"
+        android:name="com.santoshdevadiga.sampleapp.ui.listing.list.ListFragment"
         android:label="@string/label_list"
         tools:layout="@layout/fragment_list" >
         <action
@@ -90,7 +90,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.santoshdevadiga.sampleapp.ui.detail.DetailFragment"
+        android:name="com.santoshdevadiga.sampleapp.ui.listing.detail.DetailFragment"
         android:label="@string/label_detail"
         tools:layout="@layout/fragment_detail" >
     </fragment>

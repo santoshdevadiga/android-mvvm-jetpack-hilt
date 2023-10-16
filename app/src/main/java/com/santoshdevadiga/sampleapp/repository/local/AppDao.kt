@@ -12,5 +12,5 @@ interface  AppDao {
     fun getAppData():LiveData<AppData> //livedata return fun always run on background thread
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-     fun insertAppData(appData: AppData) //TODO suspend funtion not working in room database
+     fun insertAppData(appData: AppData) //TODO suspend function not working in room database
 }
